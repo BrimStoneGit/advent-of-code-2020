@@ -1,16 +1,8 @@
 #include <iostream>
 #include <fstream>
-#include <vector>
 #include <string>
-#include <algorithm>
+#include <vector>
 using namespace std;
-
-void printVector(vector<int> inputVec) {
-    for (int i = 0; i < inputVec.size(); i++) 
-    {
-        cout << inputVec[i] << endl;
-    }
-}
 
 int main() {
     std::vector<string> ranges;
@@ -31,7 +23,6 @@ int main() {
 
     string delimiter_amount = "-";
     for (int i = 0; i < ranges.size(); i++) {
-        // cout << i << endl;
         int lower_bound = std::stoi(ranges[i].substr(0, ranges[i].find(delimiter_amount)));
         int upper_bound = std::stoi(ranges[i].substr(ranges[i].find(delimiter_amount) + 1, ranges[i].size()));
         char current_char = characters[i].at(0);
